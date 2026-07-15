@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Looper",
+  title: "Looper AI",
   description: "Looper is the autonomous coding agent that keeps working and iterating.",
 };
 
