@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PawPrint, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button"
 
 const links = [
   { to: "/", label: "Home" },
@@ -45,6 +46,8 @@ export const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          <Link className="bg-primary text-primary-foreground hover:bg-primary/80 py-0.5 px-2 rounded-sm"
+           href={"/sign-in"}>{'> '}Login</Link>
         </nav>
 
         <button
