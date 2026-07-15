@@ -10,17 +10,17 @@ const methods = [
   {
     id: "npm",
     label: "npm",
-    code: "npm install -g openpaw",
+    code: "npm install -g looper",
   },
   {
     id: "curl",
     label: "curl",
-    code: "curl -fsSL https://get.openpaw.dev | sh",
+    code: "curl -fsSL https://get.looper.dev | sh",
   },
   {
     id: "brew",
     label: "brew",
-    code: "brew install openpaw",
+    code: "brew install looper",
   },
 ] as const;
 
@@ -55,7 +55,7 @@ export const Install = () => {
 
           <p className="text-white/55 text-base mb-10 max-w-md mx-auto leading-relaxed">
             One command. Node 18+, macOS / Linux / WSL. Then run{" "}
-            <code className="text-[#39FF14]">openpaw init</code>.
+            <code className="text-[#39FF14]">looper init</code>.
           </p>
 
           <div className="flex justify-center gap-2 mb-4">

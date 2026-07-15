@@ -7,10 +7,10 @@ const modes = [
   {
     icon: Map,
     name: "Plan Mode",
-    cmd: "openpaw --mode plan",
+    cmd: "looper --mode plan",
     color: "#00FFFF",
     span: "md:col-span-5",
-    desc: "OpenPaw studies your codebase and drafts a step-by-step battle plan before touching a single file. Review, tweak, approve.",
+    desc: "Looper studies your codebase and drafts a step-by-step battle plan before touching a single file. Review, tweak, approve.",
     lines: [
       "├─ [1] analyze dependencies",
       "├─ [2] draft migration plan",
@@ -20,7 +20,7 @@ const modes = [
   {
     icon: MessageCircleQuestion,
     name: "Ask Mode",
-    cmd: "openpaw --mode ask",
+    cmd: "looper --mode ask",
     color: "#FF69B4",
     span: "md:col-span-7",
     desc: "A read-only companion for your repo. Ask anything about your code, configs, or logs — get answers without side effects. Perfect for onboarding onto unfamiliar codebases.",
@@ -33,10 +33,10 @@ const modes = [
   {
     icon: Zap,
     name: "Agent Mode",
-    cmd: "openpaw --mode agent",
+    cmd: "looper --mode agent",
     color: "#39FF14",
     span: "md:col-span-12",
-    desc: "Full autonomy, unleashed. OpenPaw executes plans end-to-end: edits files, runs tests, fixes failures, and reports back on Telegram when the job is done. You stay in control with checkpoints and rollbacks.",
+    desc: "Full autonomy, unleashed. Looper executes plans end-to-end: edits files, runs tests, fixes failures, and reports back on Telegram when the job is done. You stay in control with checkpoints and rollbacks.",
     lines: [
       "✓ 14 files modified",
       "✓ tests passing (98/98)",

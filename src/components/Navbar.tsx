@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { PawPrint, Menu, X } from "lucide-react";
+import { Repeat2, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button"
 
@@ -24,9 +24,9 @@ export const Navbar = () => {
           data-testid="nav-logo"
           className="flex items-center gap-2 group"
         >
-          <PawPrint className="w-6 h-6 text-[#39FF14] transition-transform duration-300 group-hover:rotate-12" />
+          <Repeat2 className="w-6 h-6 text-[#39FF14] transition-transform duration-300 group-hover:rotate-12" />
           <span className="font-mono text-lg tracking-tighter font-bold">
-            open<span className="text-[#39FF14]">paw</span>
+            loo<span className="text-[#39FF14]">per</span>
           </span>
         </Link>
 

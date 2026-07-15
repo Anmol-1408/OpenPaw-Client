@@ -1,15 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { PawPrint, MessageCircle } from "lucide-react";
+import { Repeat2, MessageCircle } from "lucide-react";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 
 import { WaitlistForm } from "@/components/WaitlistForm";
 
 const footerData = {
   brand: {
-    name: "open",
-    highlight: "paw",
+    name: "loop",
+    highlight: "er",
     description:
       "The CLI AI agent that plans, asks, and acts. Join the waitlist for early access to new releases.",
   },
@@ -69,8 +69,8 @@ const footerData = {
     },
   ],
 
-  copyright: "© 2026 OpenPaw. MIT Licensed.",
-  version: "$ openpaw --version 1.4.2",
+  copyright: "© 2026 Looper. MIT Licensed.",
+  version: "$ looper --version 1.4.2",
 };
 
 export const Footer = () => {
@@ -81,7 +81,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-5">
             <div className="mb-4 flex items-center gap-2">
-              <PawPrint className="h-6 w-6 text-[#39FF14]" />
+              <Repeat2 className="h-6 w-6 text-[#39FF14]" />
 
               <span className="font-mono text-lg font-bold tracking-tighter">
                 {footerData.brand.name}
