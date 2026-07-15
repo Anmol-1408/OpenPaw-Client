@@ -1,14 +1,26 @@
 "use client";
 import { motion } from "framer-motion";
 
-const releases = [
+type ChangelogItem = {
+  type: "new" | "fix" | "improved";
+  text: string;
+};
+
+type Release = {
+  version: string;
+  date: string;
+  tag?: string;
+  changes: ChangelogItem[];
+};
+
+const releases: Release[] = [
   {
     version: "1.4.2",
     date: "June 12, 2026",
     tag: "latest",
     changes: [
       { type: "new", text: "Telegram integration: run reports, alerts, and inline approval buttons" },
-      { type: "new", text: "`openpaw schedule` now accepts natural language times (--at 9am)" },
+      { type: "new", text: "`looper schedule` now accepts natural language times (--at 9am)" },
       { type: "fix", text: "Agent mode no longer re-runs passing tests after checkpoint resume" },
     ],
   },
@@ -17,7 +29,7 @@ const releases = [
     date: "May 28, 2026",
     changes: [
       { type: "new", text: "Task scheduling daemon with cron support and missed-run recovery" },
-      { type: "new", text: "Slack slash commands: trigger agent runs with /openpaw" },
+      { type: "new", text: "Slack slash commands: trigger agent runs with /looper" },
       { type: "improved", text: "Plan mode is 2.3x faster on repos with 1000+ files" },
     ],
   },
@@ -34,8 +46,8 @@ const releases = [
     version: "1.2.0",
     date: "March 3, 2026",
     changes: [
-      { type: "new", text: "Checkpoints and `openpaw rollback` for agent mode" },
-      { type: "improved", text: "Repo indexing now respects .gitignore and .openpawignore" },
+      { type: "new", text: "Checkpoints and `looper rollback` for agent mode" },
+      { type: "improved", text: "Repo indexing now respects .gitignore and .looperignore" },
     ],
   },
   {
@@ -49,7 +61,7 @@ const releases = [
   },
 ];
 
-const badge = {
+const badge: Record<ChangelogItem["type"], string> = {
   new: "bg-[#39FF14]/15 text-[#39FF14]",
   fix: "bg-[#FF69B4]/15 text-[#FF69B4]",
   improved: "bg-[#00FFFF]/15 text-[#00FFFF]",
@@ -77,7 +89,7 @@ export default function Changelog() {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="pl-8 relative"
             >
-              <span className="absolute -left-[7px] top-2 w-3.5 h-3.5 rounded-full bg-[#050505] border-2 border-[#39FF14]" />
+              <span className="absolute -left-1.75 top-2 w-3.5 h-3.5 rounded-full bg-[#050505] border-2 border-[#39FF14]" />
               <div className="flex items-center gap-3 mb-1 flex-wrap">
                 <h2 className="font-mono font-bold text-2xl tracking-tight">v{r.version}</h2>
                 {r.tag && (
@@ -88,7 +100,7 @@ export default function Changelog() {
               </div>
               <p className="font-mono text-xs text-white/40 mb-5">{r.date}</p>
               <ul className="space-y-3">
-                {r.changes.map((c) => (
+                {r.changes.map((c: ChangelogItem) => (
                   <li key={c.text} className="flex items-start gap-3">
                     <span className={`shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-mono uppercase ${badge[c.type]}`}>
                       {c.type}

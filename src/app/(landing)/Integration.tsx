@@ -81,7 +81,7 @@ export const Integrations = () => (
 
     <div className="max-w-7xl mx-auto px-6 mt-14">
       <div className="terminal-surface p-5 font-mono text-sm max-w-2xl">
-        <div className="text-white/40 mb-2"># ~/.openpaw/config.toml</div>
+        <div className="text-white/40 mb-2"># ~/.looper/config.toml</div>
         <div><span className="text-[#FF69B4]">[integrations.telegram]</span></div>
         <div><span className="text-[#00FFFF]">bot_token</span> = <span className="text-[#39FF14]">"env:TELEGRAM_TOKEN"</span></div>
         <div><span className="text-[#00FFFF]">notify_on</span> = <span className="text-[#39FF14]">["task_done", "error", "approval_needed"]</span></div>

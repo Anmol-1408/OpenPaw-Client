@@ -10,7 +10,7 @@ const tasks = [
 ];
 
 const perks = [
-  { icon: Clock, title: "Cron, but readable", desc: "Say `--at 9am` or `--every 15m`. OpenPaw handles timezones and missed runs." },
+  { icon: Clock, title: "Cron, but readable", desc: "Say `--at 9am` or `--every 15m`. Looper handles timezones and missed runs." },
   { icon: Repeat, title: "Recurring agents", desc: "Schedule full agent runs — refactors, audits, reports — on autopilot." },
   { icon: BellRing, title: "Wake up to results", desc: "Every scheduled run pushes its outcome to your favorite app." },
 ];
@@ -60,7 +60,7 @@ export const Scheduling = () => (
         className="terminal-surface p-6"
       >
         <div className="flex items-center justify-between mb-5">
-          <span className="font-mono text-sm text-white/60">$ openpaw schedule list</span>
+          <span className="font-mono text-sm text-white/60">$ looper schedule list</span>
           <span className="font-mono text-xs text-[#39FF14]">4 active</span>
         </div>
         <div className="space-y-3">

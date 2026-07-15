@@ -1,20 +1,26 @@
 "use client"
 import { useState, useEffect } from "react";
 
-const script = [
-  { type: "cmd", text: "openpaw --mode plan \"refactor my auth module\"" },
-  { type: "out", text: "🐾 OpenPaw v1.4.2 — plan mode engaged", color: "#39FF14" },
+type ScriptLine = {
+  type: "cmd" | "out";
+  text: string;
+  color?: string;
+};
+
+const script: ScriptLine[] = [
+  { type: "cmd", text: "looper --mode plan \"refactor my auth module\"" },
+  { type: "out", text: "↻ Looper v1.4.2 — plan mode engaged", color: "#39FF14" },
   { type: "out", text: "├─ scanning repo... 142 files indexed", color: "#888893" },
   { type: "out", text: "├─ [1] extract token logic → auth/tokens.py", color: "#00FFFF" },
   { type: "out", text: "├─ [2] add refresh rotation + tests", color: "#00FFFF" },
   { type: "out", text: "└─ [3] schedule nightly security scan", color: "#00FFFF" },
-  { type: "out", text: "plan ready. run `openpaw --mode agent` to execute", color: "#FF69B4" },
-  { type: "cmd", text: "openpaw schedule \"daily standup summary\" --at 9am --to telegram" },
+  { type: "out", text: "plan ready. run `looper --mode agent` to execute", color: "#FF69B4" },
+  { type: "cmd", text: "looper schedule \"daily standup summary\" --at 9am --to telegram" },
   { type: "out", text: "✓ task scheduled — reports to @your_telegram", color: "#39FF14" },
 ];
 
 export const TerminalDemo = () => {
-  const [lines, setLines] = useState([]);
+  const [lines, setLines] = useState<ScriptLine[]>([]);
   const [current, setCurrent] = useState("");
   const [idx, setIdx] = useState(0);
 
@@ -57,9 +63,9 @@ export const TerminalDemo = () => {
         <span className="w-3 h-3 rounded-full bg-[#FF5F56]" />
         <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
         <span className="w-3 h-3 rounded-full bg-[#27C93F]" />
-        <span className="ml-3 text-xs font-mono text-white/40">openpaw — zsh</span>
+        <span className="ml-3 text-xs font-mono text-white/40">looper — zsh</span>
       </div>
-      <div className="p-5 font-mono text-[13px] leading-relaxed min-h-[300px]">
+      <div className="p-5 font-mono text-[13px] leading-relaxed" style={{ minHeight: "300px" }}>
         {lines.map((l, i) => (
           <div key={i} className="mb-1">
             {l.type === "cmd" ? (

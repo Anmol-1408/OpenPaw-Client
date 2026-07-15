@@ -49,7 +49,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-8 max-w-lg text-base leading-relaxed text-white/60 md:text-lg"
           >
-            OpenPaw is the CLI AI agent that plans before it pounces. Three
+            Looper is the CLI AI agent that plans before it loops. Three
             modes, deep app integrations, and scheduled tasks — all from your
             shell.
           </motion.p>
@@ -61,7 +61,7 @@ export const Hero = () => {
             className="mb-8"
           >
             <CodeBlock
-              code="npm install -g openpaw"
+              code="npm install -g looper"
               testId="hero-copy-install-button"
             />
           </motion.div>
@@ -77,7 +77,7 @@ export const Hero = () => {
               data-testid="hero-install-cta"
               className="flex items-center gap-2 rounded-md bg-[#39FF14] px-6 py-3 font-mono text-sm font-bold text-black transition-transform duration-200 hover:-translate-y-0.5 hover:brightness-110"
             >
-              Install OpenPaw
+              Install Looper
               <ArrowRight className="h-4 w-4" />
             </a>
 
